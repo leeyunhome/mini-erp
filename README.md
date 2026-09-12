@@ -1,12 +1,12 @@
-# charter-ledger
+# mini-erp
 
-**해운 용선(Charter)·정산 관리 토이 프로젝트 — React + Node.js/Express + PostgreSQL**
+**해운 용선(Charter)·정산 관리 미니 ERP 토이 프로젝트 — React + Node.js/Express + PostgreSQL**
 
 선박 용선계약을 등록하고, 계약별 정산(용선료·연료비·항비 등) 내역을 원장 형태로 기록하며,
 계약별/월별 집계와 미정산 계약을 리포트로 확인하는 3모듈짜리 사내 업무 시스템을
 축소 재현한 개인 학습 프로젝트입니다.
 
-🔗 **라이브 데모(정적, 인메모리 목 데이터)**: https://leeyunhome.github.io/charter-ledger/
+🔗 **라이브 데모(정적, 인메모리 목 데이터)**: https://leeyunhome.github.io/mini-erp/
 
 ---
 
@@ -36,7 +36,7 @@ React/Java/PostgreSQL 스택을 요구하는 채용 공고(해운업 사내 시�
 ## 구조
 
 ```
-charter-ledger/
+mini-erp/
 ├─ api/                  # Express + PostgreSQL 백엔드
 │  ├─ schema.sql         # 테이블 정의
 │  ├─ seed.sql           # 샘플 데이터

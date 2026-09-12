@@ -22,4 +22,4 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`charter-ledger api listening on :${PORT}`));
+app.listen(PORT, () => console.log(`mini-erp api listening on :${PORT}`));

@@ -7,5 +7,5 @@ export const pool = new Pool({
     port: Number(process.env.PGPORT) || 5432,
     user: process.env.PGUSER || "postgres",
     password: process.env.PGPASSWORD || "postgres",
-    database: process.env.PGDATABASE || "charter_ledger",
+    database: process.env.PGDATABASE || "mini_erp",
 });
