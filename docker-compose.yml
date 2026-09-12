@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: charter_ledger
+    ports:
+      - "5432:5432"
+    volumes:
+      - charter_ledger_data:/var/lib/postgresql/data
+
+volumes:
+  charter_ledger_data:
