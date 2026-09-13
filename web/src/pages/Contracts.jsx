@@ -34,7 +34,10 @@ export default function Contracts() {
         if (editingId) {
             await updateContract(editingId, form);
         } else {
-            const contract_no = `CC-${new Date().getFullYear()}-${String(contracts.length + 1).padStart(3, "0")}`;
+            // 상태 필터가 걸려 있으면 contracts.length가 전체 건수보다 작아 번호가 충돌할 수 있어,
+            // 필터와 무관하게 전체 목록을 다시 조회해 다음 번호를 계산한다.
+            const all = await listContracts();
+            const contract_no = `CC-${new Date().getFullYear()}-${String(all.length + 1).padStart(3, "0")}`;
             await createContract({ ...form, contract_no });
         }
         setForm(EMPTY);

@@ -4,6 +4,8 @@ import { router as contractsRouter } from "./routes/contracts.js";
 import { router as ledgerRouter } from "./routes/ledger.js";
 import { router as reportsRouter } from "./routes/reports.js";
 import { router as vesselsRouter } from "./routes/vessels.js";
+import { router as legacyRouter } from "./routes/legacy.js";
+import { router as accountingRouter } from "./routes/accounting.js";
 
 const app = express();
 app.use(cors());
@@ -13,6 +15,8 @@ app.use("/api/contracts", contractsRouter);
 app.use("/api/ledger", ledgerRouter);
 app.use("/api/reports", reportsRouter);
 app.use("/api/vessels", vesselsRouter);
+app.use("/api/legacy", legacyRouter);
+app.use("/api/accounting", accountingRouter);
 
 app.get("/api/health", (req, res) => res.json({ ok: true }));
 

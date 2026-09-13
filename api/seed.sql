@@ -22,3 +22,12 @@ INSERT INTO ledger_entries (contract_id, entry_type, side, amount, memo, settled
     (3, 'PORT', 'DEBIT',   15500.00, '출항비',          '2026-03-05'),
     (4, 'HIRE', 'CREDIT', 396000.00, '2025-12 용선료', '2025-12-31'),
     (4, 'ADJUSTMENT', 'DEBIT', 4000.00, '지연 손해배상 정산', '2026-01-05');
+
+-- 복식부기 계정과목 (레거시 마이그레이션 결과도 이 계정으로 분개된다)
+INSERT INTO accounts (code, name, account_type) VALUES
+    ('1000', '현금',       'ASSET'),
+    ('1100', '미수금',     'ASSET'),
+    ('4000', '용선매출',   'REVENUE'),
+    ('5000', '연료비',     'EXPENSE'),
+    ('5100', '항비',       'EXPENSE'),
+    ('5900', '정산조정',   'EXPENSE');

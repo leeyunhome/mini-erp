@@ -3,7 +3,9 @@ name: Deploy web to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ["web/**", ".github/workflows/deploy.yml"]
+    # web/ 빌드가 ?raw로 api/*.sql·shared/*를 그대로 가져다 쓰므로(단일 소스 유지),
+    # 그 경로들이 바뀌어도 재배포되어야 한다.
+    paths: ["web/**", "api/**", "shared/**", ".github/workflows/deploy.yml"]
   workflow_dispatch:
 
 permissions:

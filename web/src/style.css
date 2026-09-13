@@ -85,3 +85,9 @@ button[type="button"] { background: #94a3b8; }
 .bar-track { background: #eef1f4; border-radius: 6px; height: 16px; overflow: hidden; }
 .bar-fill { background: var(--acc); height: 100%; border-radius: 6px; transition: width .3s; }
 .bar-value { font-size: 0.85rem; text-align: right; }
+
+.plan-box {
+    background: #0f1720; color: #d1e7f0; font-family: "Cascadia Code", Consolas, monospace;
+    font-size: 0.78rem; padding: 12px 14px; border-radius: 8px; overflow-x: auto;
+    white-space: pre; margin: 10px 0;
+}
